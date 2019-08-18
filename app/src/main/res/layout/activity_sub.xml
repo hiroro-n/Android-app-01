@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SubActivity">
+
+    <fragment
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:name="tokyo.hiroron.KanKanKanji.TitleFragment"
+            android:id="@+id/titleFragment" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" tools:layout="@layout/fragment_title"/>
+    <TextView
+            android:text="@string/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView8" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/titleFragment" android:layout_marginTop="16dp"
+            android:textColor="#000000" android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:labelFor="@id/question"/>
+    <TextView
+            android:text="@string/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView9" android:textColor="#000000" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintTop_toBottomOf="@+id/question" android:layout_marginTop="8dp"
+            android:labelFor="@id/answer"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/answer"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" android:layout_marginTop="4dp"
+            android:textAlignment="center" android:hint="例） 太陽" android:layout_marginStart="56dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="56dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/question"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" android:layout_marginTop="4dp"
+            android:layout_marginStart="56dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginEnd="56dp" app:layout_constraintEnd_toEndOf="parent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" android:textColor="#000000"
+            android:textAlignment="center" android:hint="例） たいよう"/>
+    <Button
+            android:text="@string/register"
+            android:layout_width="0dp"
+            android:layout_height="50sp"
+            android:id="@+id/registerButton" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/answer"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="80dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="80dp" android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#000000" android:textAlignment="center" android:background="#D8F3FF"/>
+    <Button
+            android:text="@string/incorrectQuestion"
+            android:layout_width="0dp"
+            android:layout_height="50sp"
+            android:id="@+id/challengeButton" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" android:textColor="#000000"
+            android:textAlignment="center" android:background="#81F5C0"
+            android:layout_marginTop="40dp" app:layout_constraintTop_toBottomOf="@+id/registerButton"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
